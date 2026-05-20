@@ -48,6 +48,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 52px; /* Offsets anchor scroll by navbar height */
 }
 
 body {
