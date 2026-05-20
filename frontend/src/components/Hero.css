@@ -101,4 +101,8 @@
 
 @media (max-width: 600px) {
   .hero h1 { font-size: 28px; }
+  .scroll-indicator {
+    bottom: 16px;
+    left: var(--space-md);
+  }
 }

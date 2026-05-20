@@ -5,6 +5,7 @@ import './Navbar.css';
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,12 +39,23 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <a href="#hero" className="nav-brand" style={{ textDecoration: 'none' }}>BANK RETENTION ANALYTICS</a>
-      <ul className="nav-links">
+      
+      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        <span className={`bar ${menuOpen ? 'open' : ''}`}></span>
+        <span className={`bar ${menuOpen ? 'open' : ''}`}></span>
+        <span className={`bar ${menuOpen ? 'open' : ''}`}></span>
+      </div>
+
+      <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
         {NAV_LINKS.map((link) => {
           const isActive = activeSection === link.href.substring(1);
           return (
             <li key={link.href}>
-              <a href={link.href} className={`nav-link ${isActive ? 'active' : ''}`}>
+              <a 
+                href={link.href} 
+                className={`nav-link ${isActive ? 'active' : ''}`}
+                onClick={() => setMenuOpen(false)}
+              >
                 {link.label}
               </a>
             </li>
