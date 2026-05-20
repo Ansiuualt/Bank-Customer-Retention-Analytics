@@ -1,0 +1,193 @@
+:root {
+  /* Backgrounds */
+  --navy:    #0a0f1e;   /* page background */
+  --navy2:   #111827;   /* card / surface background */
+  --navy3:   #1a2235;   /* hover state background */
+
+  /* Borders */
+  --border:  #1e2d45;   /* default border color */
+
+  /* Accent Colors */
+  --amber:   #f5a623;   /* primary accent — warnings, highlights */
+  --amber2:  #fbbf24;   /* lighter amber for hover states */
+  --teal:    #14b8a6;   /* secondary accent — positive, success */
+  --coral:   #f87171;   /* danger, outlier, alert */
+  --purple:  #a78bfa;   /* tertiary — relationship/maturity */
+  --green:   #34d399;   /* financial/commitment color */
+
+  /* Text */
+  --text:    #c8d6e8;   /* primary body text */
+  --text2:   #8fa3c0;   /* secondary / muted text */
+  --muted:   #4b6080;   /* very muted — labels, tags */
+  --white:   #e8f0fc;   /* near-white for headings */
+
+  /* Typography */
+  --font-mono:   'DM Mono', 'Fira Code', monospace;
+  --font-serif:  'Playfair Display', 'Georgia', serif;
+  --font-sans:   'DM Sans', 'Inter', sans-serif;
+
+  /* Spacing scale */
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  40px;
+  --space-2xl: 64px;
+
+  /* Border radius */
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--navy);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--white);
+}
+
+.loading-screen, .error-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--navy);
+  color: var(--text2);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  text-align: center;
+}
+
+.error-screen {
+  color: var(--coral);
+}
+
+/* Section Header Pattern */
+.sec-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 32px var(--space-xl) 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.sec-num {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+}
+.sec-title {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text2);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Base Card Styles */
+.card {
+  background: var(--navy2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+.card:hover {
+  border-color: rgba(245, 166, 35, 0.4);
+  background: var(--navy3);
+}
+
+.card-accent {
+  border-top: 2px solid var(--accent-color, var(--border));
+}
+
+/* Section base layout */
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: var(--space-xl);
+  padding-right: var(--space-xl);
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Responsive grid patterns */
+.kpi-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.rsi-tiers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.mod-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding-top: 24px;
+}
+
+.geo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding-top: 24px;
+}
+
+.pipeline {
+  display: flex;
+  gap: 0;
+  padding-top: 24px;
+}
+
+.pipe-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  width: 28px;
+}
+
+@media (max-width: 900px) {
+  .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+  .pillar-grid { grid-template-columns: repeat(3, 1fr); }
+  .pipeline { flex-direction: column; }
+  .pipe-arrow { transform: rotate(90deg); height: 28px; width: 100%; }
+}
+
+@media (max-width: 600px) {
+  .kpi-strip { grid-template-columns: 1fr; }
+  .pillar-grid { grid-template-columns: repeat(2, 1fr); }
+  .rsi-tiers { grid-template-columns: 1fr; }
+  .mod-grid { grid-template-columns: 1fr; }
+  .geo-grid { grid-template-columns: 1fr; }
+  h1 { font-size: 28px; }
+}

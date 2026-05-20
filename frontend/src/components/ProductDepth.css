@@ -1,0 +1,13 @@
+.product-intro {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  color: var(--text);
+  line-height: 1.6;
+  font-style: italic;
+  padding: 24px 0;
+  max-width: 800px;
+}
+
+.product-chart {
+  margin-bottom: 32px;
+}

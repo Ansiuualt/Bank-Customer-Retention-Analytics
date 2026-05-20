@@ -1,0 +1,156 @@
+{
+  "kpis": [
+    {
+      "id": "churn",
+      "label": "Baseline Churn Rate",
+      "value": "20.37%",
+      "numericValue": 20.37,
+      "note": "2,037 of 10,000 customers exited",
+      "barWidth": 20.37,
+      "color": "amber"
+    },
+    {
+      "id": "gap",
+      "label": "Engagement Retention Gap",
+      "value": "+12.58pp",
+      "numericValue": 12.58,
+      "note": "Active 14.27% vs Inactive 26.85% churn",
+      "barWidth": 37.75,
+      "color": "teal"
+    },
+    {
+      "id": "sweet",
+      "label": "Two-Product Sweet Spot",
+      "value": "7.58%",
+      "numericValue": 7.58,
+      "note": "Lowest churn \u2014 exactly 2 products held (n=4,590)",
+      "barWidth": 7.58,
+      "color": "white"
+    },
+    {
+      "id": "germany",
+      "label": "Germany Churn Rate",
+      "value": "32.44%",
+      "numericValue": 32.44,
+      "note": "+12.1pp above global average",
+      "barWidth": 32.44,
+      "color": "coral"
+    }
+  ],
+  "engagement": [
+    {
+      "segment": "Active Members",
+      "churnRate": 14.27,
+      "fill": "#14b8a6"
+    },
+    {
+      "segment": "Inactive Members",
+      "churnRate": 26.85,
+      "fill": "#f87171"
+    },
+    {
+      "segment": "Global Average",
+      "churnRate": 20.37,
+      "fill": "#f5a623"
+    }
+  ],
+  "products": [
+    {
+      "products": "1 Product",
+      "churnRate": 27.71,
+      "count": 5084,
+      "label": "High Risk",
+      "fill": "#f5a623"
+    },
+    {
+      "products": "2 Products",
+      "churnRate": 7.58,
+      "count": 4590,
+      "label": "Sweet Spot \u2726",
+      "fill": "#14b8a6"
+    },
+    {
+      "products": "3 Products",
+      "churnRate": 82.71,
+      "count": 266,
+      "label": "Overloaded",
+      "fill": "#f87171"
+    },
+    {
+      "products": "4 Products",
+      "churnRate": 100.0,
+      "count": 60,
+      "label": "Critical",
+      "fill": "#ef4444"
+    }
+  ],
+  "geography": [
+    {
+      "country": "France",
+      "customerCount": 5014,
+      "churnRate": 16.15,
+      "code": "FR",
+      "color": "#14b8a6",
+      "bgAlpha": "rgba(20,184,166,0.08)",
+      "borderAlpha": "rgba(20,184,166,0.3)",
+      "status": "Stable",
+      "note": "Stable retention. Below global average. Standard engagement programs apply."
+    },
+    {
+      "country": "Germany",
+      "customerCount": 2509,
+      "churnRate": 32.44,
+      "code": "DE",
+      "color": "#f87171",
+      "bgAlpha": "rgba(248,113,113,0.08)",
+      "borderAlpha": "rgba(248,113,113,0.35)",
+      "status": "Critical",
+      "note": "Severe systemic outlier. Driven by fragmented domestic market, regional cooperative networks, and aggressive digital disruptors."
+    },
+    {
+      "country": "Spain",
+      "customerCount": 2477,
+      "churnRate": 16.67,
+      "code": "ES",
+      "color": "#14b8a6",
+      "bgAlpha": "rgba(20,184,166,0.08)",
+      "borderAlpha": "rgba(20,184,166,0.3)",
+      "status": "Stable",
+      "note": "Stable retention. Mirrors France. Standard engagement programs apply without localized adjustment."
+    }
+  ],
+  "rsi": {
+    "maxTenure": 10,
+    "retainedAvgRsi": 49.4,
+    "churnedAvgRsi": 46.46,
+    "delta": 2.94,
+    "tiers": {
+      "risk": {
+        "count": 3030,
+        "churnRate": 26.7
+      },
+      "nurture": {
+        "count": 5636,
+        "churnRate": 17.0
+      },
+      "sticky": {
+        "count": 1332,
+        "churnRate": 20.12
+      }
+    }
+  },
+  "pipeline": {
+    "totalRows": 10000,
+    "totalChurned": 2037,
+    "churnRate": 20.37,
+    "activeChurn": 14.27,
+    "inactiveChurn": 26.85,
+    "engagementGap": 12.58,
+    "q75Balance": 127644,
+    "highBalanceDisengagedCount": 1247,
+    "highBalanceDisengagedChurn": 30.47,
+    "zeroBalanceCount": 3617,
+    "maxTenure": 10,
+    "creditCardChurnReduction": 0.63
+  }
+}

@@ -1,0 +1,48 @@
+.module-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.module-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.module-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--teal);
+}
+
+.module-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.module-desc {
+  font-size: 11px;
+  color: var(--text2);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.module-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  background: rgba(20, 184, 166, 0.1);
+  color: var(--teal);
+  border: 1px solid rgba(20, 184, 166, 0.2);
+}

@@ -1,0 +1,85 @@
+.engagement-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding-top: 24px;
+}
+
+.custom-tooltip {
+  background: var(--navy2);
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+.tooltip-label {
+  color: var(--text2);
+  margin-bottom: 4px;
+}
+.tooltip-value {
+  font-family: var(--font-mono);
+  font-size: 16px;
+}
+
+.chart-callout {
+  margin-bottom: 24px;
+}
+.callout-label {
+  font-size: 11px;
+  color: var(--text2);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+.callout-value {
+  font-family: var(--font-mono);
+  font-size: 28px;
+  color: var(--teal);
+}
+.callout-note {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.engagement-profiles-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.profile-risk-badge {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+}
+
+.profile-desc {
+  font-size: 12px;
+  color: var(--text2);
+}
+
+@media (max-width: 900px) {
+  .engagement-layout {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,129 @@
+.formula-block {
+  background: var(--navy2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin: 24px 0;
+}
+
+.formula-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.formula-text {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.validation-stats {
+  display: flex;
+  gap: 16px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.tier-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.tier-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid;
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+}
+
+.tier-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.tier-name {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tier-range {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text2);
+  margin-left: auto;
+}
+
+.tier-desc {
+  font-size: 12px;
+  color: var(--text2);
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.tier-action {
+  font-size: 11px;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid;
+  margin-bottom: 12px;
+}
+
+.tier-stats {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.pillar-card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 12px;
+}
+
+.pillar-points {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.pillar-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.pillar-variable {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--text2);
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.pillar-progress-bg {
+  height: 2px;
+  background: var(--border);
+  border-radius: 1px;
+}
+
+.pillar-progress-fill {
+  height: 100%;
+  border-radius: 1px;
+}
+
+.pillar-footer {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  text-align: right;
+  margin-top: 12px;
+}
